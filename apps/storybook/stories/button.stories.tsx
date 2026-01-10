@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from '@repo/ui/button';
 
 const meta = {
@@ -9,17 +9,29 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    appName: {
+    children: {
       control: 'text',
-      description: 'The name of the application',
+      description: 'Button content',
+      table: {
+        type: { summary: 'ReactNode' },
+        defaultValue: { summary: 'undefined' },
+      },
     },
     className: {
       control: 'text',
       description: 'Additional CSS classes',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: "''" },
+      },
     },
-    children: {
-      control: 'text',
-      description: 'Button content',
+    onClick: {
+      action: 'clicked',
+      description: 'Click handler function',
+      table: {
+        type: { summary: '() => void' },
+        defaultValue: { summary: 'undefined' },
+      },
     },
   },
 } satisfies Meta<typeof Button>;
@@ -27,48 +39,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const BtnDefault: Story = {
   args: {
-    children: 'Click me',
-    appName: 'storybook',
-  },
-};
-
-export const WebApp: Story = {
-  args: {
-    children: 'Web Button',
-    appName: 'web',
-  },
-};
-
-export const DocsApp: Story = {
-  args: {
-    children: 'Docs Button',
-    appName: 'docs',
-  },
-};
-
-export const WithCustomClass: Story = {
-  args: {
-    children: 'Styled Button',
-    appName: 'storybook',
-    className: 'px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors',
-  },
-};
-
-export const LongText: Story = {
-  args: {
-    children: 'This is a button with a very long text content',
-    appName: 'storybook',
-    className: 'px-4 py-2 bg-gray-100 rounded',
-  },
-};
-
-export const DifferentStyles: Story = {
-  args: {
-    children: 'Custom Style',
-    appName: 'storybook',
-    className:
-      'px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full shadow-lg hover:scale-105 transition-transform',
+    children: '다음',
   },
 };

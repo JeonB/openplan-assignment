@@ -1,3 +1,6 @@
-import baseConfig from '@repo/eslint-config/base.js';
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook';
 
-export default [...baseConfig];
+import { config as baseConfig } from '@repo/eslint-config/base';
+
+export default [...baseConfig, ...storybook.configs['flat/recommended']];

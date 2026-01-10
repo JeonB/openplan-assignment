@@ -1,4 +1,5 @@
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
+import '@repo/tailwind-config';
 
 const preview: Preview = {
   parameters: {

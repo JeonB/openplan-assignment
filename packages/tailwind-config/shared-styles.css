@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+@source '../../packages/ui/src/**/*.{tsx,ts,jsx,js}';
+@source '../../apps/storybook/**/*.{tsx,ts,jsx,js}';
+
+@theme inline {
+  --color-black-100: #111111;
+  --radius: var(--radius);
+}
