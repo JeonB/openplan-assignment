@@ -45,24 +45,23 @@ export const BtnDefault: Story = {
   },
 };
 
-export const BtnHovered: Story = {
+export const BtnHoveredAndPressed: Story = {
   args: {
     children: '다음',
   },
-  parameters: {
-    pseudo: {
-      hover: true,
-    },
-  },
-};
+  render: () => (
+    <div className="flex flex-col gap-6">
+      {/* Default State */}
+      <div className="flex flex-col gap-2">
+        <span className="text-sm font-medium text-gray-600">Default</span>
+        <Button>다음</Button>
+      </div>
 
-export const BtnPressed: Story = {
-  args: {
-    children: '다음',
-  },
-  parameters: {
-    pseudo: {
-      active: true,
-    },
-  },
+      {/* Hovered State */}
+      <div className="flex flex-col gap-2">
+        <span className="text-sm font-medium text-gray-600">BtnHovered&Pressed</span>
+        <Button className="!bg-black-100/80">다음</Button>
+      </div>
+    </div>
+  ),
 };
