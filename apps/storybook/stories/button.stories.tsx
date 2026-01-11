@@ -44,3 +44,25 @@ export const BtnDefault: Story = {
     children: '다음',
   },
 };
+
+export const BtnHovered: Story = {
+  args: {
+    children: '다음',
+  },
+  parameters: {
+    pseudo: {
+      hover: true,
+    },
+  },
+};
+
+export const BtnPressed: Story = {
+  args: {
+    children: '다음',
+  },
+  parameters: {
+    pseudo: {
+      active: true,
+    },
+  },
+};
