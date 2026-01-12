@@ -6,6 +6,7 @@ import { Button } from '@repo/ui/button';
 import { usePhotoStore } from '../../lib/stores/photo-store';
 import { usePhotoMutation } from '../../lib/hooks/use-photo';
 import Header from '../layout/header';
+import { DisplayText } from '../ui/typography';
 
 export default function HomeContent() {
   const router = useRouter();
@@ -40,12 +41,8 @@ export default function HomeContent() {
       {/* Content */}
       <div className="flex flex-1 flex-col items-center justify-center p-[10px]">
         <div className="text-center">
-          <p className="text-black-100 text-[28px] leading-[1.4] font-semibold tracking-[-0.48px] md:tracking-[-0.56px] xl:text-[32px]">
-            안녕하세요
-          </p>
-          <p className="text-black-100 text-[28px] leading-[1.4] font-semibold tracking-[-0.48px] md:tracking-[-0.56px] xl:text-[32px]">
-            전승오입니다.
-          </p>
+          <DisplayText className="text-black-100">안녕하세요</DisplayText>
+          <DisplayText className="text-black-100">전승오입니다.</DisplayText>
         </div>
       </div>
 

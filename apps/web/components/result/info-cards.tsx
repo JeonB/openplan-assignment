@@ -1,4 +1,5 @@
 import type { PhotoData } from '../../lib/types/photo.types';
+import { BodyText, BodyTextMuted, LinkText } from '../ui/typography';
 
 interface InfoCardsProps {
   photoData: PhotoData | null;
@@ -13,20 +14,15 @@ interface FieldProps {
 function Field({ label, value, isLink }: FieldProps) {
   return (
     <div className="flex flex-col">
-      <span className="text-black-100 text-base leading-[1.37] font-medium tracking-[-0.02em]">{label}</span>
+      <BodyText className="text-black-100">{label}</BodyText>
       {isLink && value ? (
-        <a
-          href={String(value)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black-100/50 text-base leading-[1.37] font-medium tracking-[-0.02em] break-all underline"
-        >
+        <LinkText href={String(value)} target="_blank" rel="noopener noreferrer" className="text-black-100">
           {String(value)}
-        </a>
+        </LinkText>
       ) : (
-        <span className="text-black-100/50 text-base leading-[1.37] font-medium tracking-[-0.02em]">
+        <BodyTextMuted className="text-black-100">
           {typeof value === 'number' ? value.toLocaleString() : (value ?? '-')}
-        </span>
+        </BodyTextMuted>
       )}
     </div>
   );
