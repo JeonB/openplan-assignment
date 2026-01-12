@@ -3,13 +3,12 @@ import localFont from 'next/font/local';
 import QueryProvider from '../components/providers/query-provider';
 import './globals.css';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
+const pretendard = localFont({
+  variable: '--font-pretendard',
+  src: './fonts/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '100 900',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -24,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${pretendard.variable}`}>
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
