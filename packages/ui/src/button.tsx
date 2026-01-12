@@ -43,7 +43,7 @@ export const Button = ({
 
   return (
     <button
-      className={`bg-black-100 hover:bg-black-100/80 active:bg-black-100/80 flex h-12 w-[335px] cursor-pointer flex-row items-center justify-center gap-1.5 rounded-xl border-none p-3 text-white transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-70 ${className}`}
+      className={`bg-black-100 hover:bg-black-100/80 active:bg-black-100/80 flex h-12 w-[335px] cursor-pointer flex-row items-center justify-center gap-1.5 rounded-xl border-none p-3 text-center text-[16px] leading-[1.48] font-semibold tracking-[-0.32px] text-white transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-70 ${className}`}
       onClick={handleClick}
       disabled={isDisabled}
       {...props}
