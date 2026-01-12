@@ -53,13 +53,13 @@ export const BtnHoveredAndPressed: Story = {
     <div className="flex flex-col gap-6">
       {/* Default State */}
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-gray-600">Default</span>
+        <span className="text-sm font-medium text-gray-600">BtnDefault</span>
         <Button>다음</Button>
       </div>
 
       {/* Hovered State */}
       <div className="flex flex-col gap-2">
-        <span className="text-sm font-medium text-gray-600">BtnHovered&Pressed</span>
+        <span className="text-sm font-medium text-gray-600">BtnHover&Pressed</span>
         <Button className="!bg-black-100/80">다음</Button>
       </div>
     </div>
